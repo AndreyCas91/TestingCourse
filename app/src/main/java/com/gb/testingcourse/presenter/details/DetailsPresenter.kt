@@ -26,5 +26,16 @@ internal class DetailsPresenter<T: View> internal constructor(
         viewContract.setCount(count)
     }
 
+    override fun getView() = viewRef?.get()
 
+    override fun onAttach(v: View) {
+        this.viewRef = WeakReference(v)
+    }
+
+    override fun onDetach() {
+        viewRef?.clear()
+        viewRef = null
+    }
+
+    fun getCount(): Int = count
 }
