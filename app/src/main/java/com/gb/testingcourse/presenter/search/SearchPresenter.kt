@@ -52,5 +52,15 @@ internal class SearchPresenter<T :View> internal constructor(
         viewContract.displayError()
     }
 
+    override fun getView() = viewRef?.get()
 
+
+    override fun onAttach(v: View) {
+        this.viewRef = WeakReference(v)
+    }
+
+    override fun onDetach() {
+        viewRef?.clear()
+        viewRef = null
+    }
 }
