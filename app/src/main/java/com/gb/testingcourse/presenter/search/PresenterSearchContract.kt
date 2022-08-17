@@ -7,7 +7,7 @@ internal interface PresenterSearchContract : PresenterContract {
     fun searchGitHub(searchQuery: String)
 
     fun test(): String{
-        val x = "aawdaf"
-        return x
+//        internal interface PresenterSearchContract : PresenterContract {
+//            fun searchGitHub(searchQuery: String)
     }
 }
