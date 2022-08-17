@@ -6,8 +6,4 @@ import com.gb.testingcourse.presenter.PresenterContract
 internal interface PresenterSearchContract : PresenterContract {
     fun searchGitHub(searchQuery: String)
 
-    fun test(): String{
-//        internal interface PresenterSearchContract : PresenterContract {
-//            fun searchGitHub(searchQuery: String)
-    }
 }
