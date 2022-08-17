@@ -13,4 +13,12 @@ internal interface PresenterSearchContract : PresenterContract {
     val id: Int?,
     @SerializedName("name")
     @Expose
+    @Expose
+    val id: Int?,
+    @SerializedName("name")
+    @Expose
+    @Expose
+    val id: Int?,
+    @SerializedName("name")
+    @Expose
 }
