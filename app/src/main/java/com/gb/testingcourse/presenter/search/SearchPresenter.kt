@@ -16,12 +16,12 @@ import java.lang.ref.WeakReference
  * выступая в роли регулировщика движения на перекрестке.
  */
 
-internal class SearchPresenter<T :View> internal constructor(
+internal class SearchPresenter internal constructor(
     private val viewContract: ViewSearchContract,
     private val repository: GitHubRepository
-) : PresenterSearchContract<T>, GitHubRepositoryCallback {
+) : PresenterSearchContract, GitHubRepositoryCallback {
 
-
+    private var viewRef: WeakReference<View>? = null
 
     override fun searchGitHub(searchQuery: String) {
         viewContract.displayLoading(true)
